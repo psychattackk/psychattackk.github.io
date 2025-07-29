@@ -1,16 +1,5 @@
 /* Global styles */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #0f0f0f;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #00ffc8;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
+
 
 /* Neon title and subtitle */
 h1 {
