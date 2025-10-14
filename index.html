@@ -3,27 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PsychAttackk Tools</title>
+  <title>Psychattackk - Home</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-   <nav class="navbar">
-  <div class="nav-logo">PsychAttackk</div>
-  <ul class="nav-links">
-    <li><a href="https://psychattackk.github.io/index.html">🏠 Home</a></li>
-    <li><a href="https://psychattackk.github.io/skills.html">💡 Skills</a></li>
-    <li><a href="https://psychattackk.github.io/FocusTimer/" target="_blank">🕒 Focus Timer</a></li>
-  </ul>
+  <nav class="navbar">
+    <a href="/" class="nav-logo">psychattackk</a>
+    <button class="navbar-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('active');">
+      &#9776;
+    </button>
+    <ul class="nav-links">
+      <li><a href="/index.html" class="neon-link">🏠 Home</a></li>
+      <li><a href="/film-reviews/index.html" class="neon-link">🎬 Film & TV Reviews</a></li>
+      <!--<li><a href="/FocusTimer/index.html" class="neon-link">⏱ Focus Timer</a></li>-->
+      <!-- Add more links if needed -->
+    </ul>
   </nav>
-
-  <div class="container">
-    <h1>PsychAttackk</h1>
-    <p>Neon-coded tools for focus, productivity, and development.</p>
-
-    <nav>
-      <button onclick="location.href='https://psychattackk.github.io/FocusTimer/'">🕒 Focus Timer</button>
-      <button onclick="location.href='https://psychattackk.github.io/skills.html'">💡 My Skills</button>
-    </nav>
-  </div>
+  <main>
+    <h1>Welcome to Psychattackk</h1>
+    <p>
+      Explore my reviews, analyses, and thoughts on great films and TV shows.<br>
+      Check out the <strong>Film & TV Reviews</strong> section for glowing commentary, or use the <strong>Focus Timer</strong> to stay productive!
+    </p>
+    <!-- You can add more homepage content here -->
+  </main>
+  <script>
+    // Close nav on link click for better mobile UX
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('active');
+      });
+    });
+  </script>
 </body>
 </html>
