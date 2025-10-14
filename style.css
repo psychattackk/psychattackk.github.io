@@ -223,13 +223,13 @@ p.neon-text {
 /* Nav links container */
 .nav-links {
   display: flex;
-  justify-content: space-evenly; /* evenly spaced */
   gap: 20px;
   list-style: none;
   margin: 0;
   padding: 0;
-  overflow-x: auto;
-  white-space: nowrap;
+  overflow-x: auto;   /* allow horizontal scroll if needed */
+  white-space: nowrap; /* prevent text from breaking */
+  justify-content: flex-start; /* allow items to start from left, no cutting off */
 }
 
 /* Hide scrollbar for smooth look */
@@ -239,8 +239,8 @@ p.neon-text {
 /* Nav links */
 .nav-links li a,
 .neon-link {
-  padding: 8px 14px;
-  font-size: 0.95em;
+  padding: 5px 12px;  /* slightly smaller padding */
+  font-size: 0.95em;  /* small enough to fit longer names */
   font-weight: bold;
   color: #00ffc8;
   text-decoration: none;
