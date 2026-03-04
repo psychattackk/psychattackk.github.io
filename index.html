@@ -1,55 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Psychattackk - Home</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychattackk - Focus Timer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <a href="/" class="nav-logo">psychattackk</a>
-    <button class="navbar-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('active');">
-      &#9776;
-    </button>
-    <ul class="nav-links">
-      <li><a href="/index.html" class="neon-link">🏠 Home</a></li>
-      <li><a href="/film-reviews/index.html" class="neon-link">🎬 Film & TV Reviews</a></li>
-      <li><a href="/FocusTimer/index.html" class="neon-link">⏱ Focus Timer</a></li>
-      <li><a href="https://psychattackk.github.io/skills.html">💡 Skills</a></li>
-      <!-- Add more links if needed -->
-    </ul>
-  </nav>
-<main>
-    <h1>Welcome to Psychattack's Official Homepage</h1>
-    
-    <div id="task-input">
-        <input type="text" id="user-task" placeholder="Enter your task here...">
-    </div>
 
-    <div id="timer-settings">
-        <select id="minutes">
-            <option value="25">25 Minutes</option>
-            <option value="50">50 Minutes</option>
-            <option value="5">5 Minutes (Break)</option>
-        </select>
-    </div>
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">psychattackk</a>
+        <button class="navbar-toggle" id="mobile-menu">☰</button>
+        <ul class="nav-links" id="nav-list">
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="reviews.html">🎬 Film & TV Reviews</a></li>
+            <li><a href="index.html">⏱ Focus Timer</a></li>
+            <li><a href="skills.html">💡 Skills</a></li>
+        </ul>
+    </nav>
 
-    <div id="currentTask">Waiting for task...</div>
-    <div id="timer" class="neon-timer">25:00</div>
+    <main>
+        <h1>Focus Timer</h1>
+        <p>Enter a task to begin your session.</p>
+        
+        <div id="task-input">
+            <input type="text" id="user-task" placeholder="What are you working on?">
+        </div>
 
-  setInterval(updateTimer, 1000);
-  updateTimer(); // Initialize immediately
+        <div id="timer-settings">
+            <select id="minutes">
+                <option value="25">25 Minutes</option>
+                <option value="50">50 Minutes</option>
+                <option value="5">5 Minutes (Break)</option>
+            </select>
+        </div>
 
-const navToggle = document.querySelector('.navbar-toggle');
-const navLinks = document.querySelector('.nav-links');
+        <div id="currentTask">Waiting for task...</div>
+        <div id="timer">25:00</div>
 
-if (navToggle) {
-    navToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-}
-</script>
-  <script src="script.js"></script>
+        <div class="button-group">
+            <button id="start-btn" class="btn">Start Timer</button>
+            <button id="reset-btn" class="btn">Reset</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
