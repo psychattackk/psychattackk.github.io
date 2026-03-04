@@ -31,7 +31,7 @@
         <select id="minutes">
             <option value="25">25 Minutes</option>
             <option value="50">50 Minutes</option>
-            <option value="5">5 Minutes (Break) </option>
+            <option value="5">5 Minutes (Break)</option>
         </select>
     </div>
 
@@ -42,8 +42,13 @@
         <button id="start-btn" class="btn">Start Timer</button>
         <button id="reset-btn" class="btn">Reset</button>
     </div>
+
+    <div id="history-section" style="margin-top: 40px;">
+        <h3 class="neon-title">Completed Tasks</h3>
+        <ul id="task-list" style="list-style: none; padding: 0;"></ul>
+    </div>
 </main>
-<audio id="alarm-sound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
     <script src="script.js"></script>
+    <audio id="alarm-sound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
 </body>
 </html>
