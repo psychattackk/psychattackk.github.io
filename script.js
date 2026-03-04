@@ -5,6 +5,7 @@ const resetBtn = document.getElementById('reset-btn');
 const taskInput = document.getElementById('user-task');
 const currentTaskDisplay = document.getElementById('currentTask');
 const minutesSelect = document.getElementById('minutes');
+const alarm = document.getElementById('alarm-sound');
 
 function startTimer() {
     const taskName = taskInput.value.trim();
@@ -24,8 +25,17 @@ function startTimer() {
         seconds--;
         displayTime(seconds);
 
+        // Add pulse effect when under 60 seconds
+        if (seconds <= 60) {
+            timerDisplay.classList.add('timer-warning');
+        } else {
+            timerDisplay.classList.remove('timer-warning');
+        }
+
         if (seconds <= 0) {
             clearInterval(countdown);
+            timerDisplay.classList.remove('timer-warning');
+            alarm.play(); // Play the sound!
             alert("Time is up! Great job on: " + taskName);
         }
     }, 1000);
@@ -40,6 +50,7 @@ function displayTime(seconds) {
 startBtn.addEventListener('click', startTimer);
 resetBtn.addEventListener('click', () => {
     clearInterval(countdown);
+    timerDisplay.classList.remove('timer-warning');
     timerDisplay.innerText = minutesSelect.value + ":00";
     taskInput.value = "";
     currentTaskDisplay.innerText = "Waiting for task...";
