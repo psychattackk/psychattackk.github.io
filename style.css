@@ -173,7 +173,38 @@ p.neon-text {
   padding: 15px 30px;
   box-shadow: 0 0 10px #00ffc8;
   display: flex;
-  justify-content: space-between; /* logo left, links right */
+  justify-content: space-between; 
+  /* Finish the Nav Links */
+.nav-links a {
+  color: #00ffc8;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+}
+
+.nav-links a:hover {
+  text-shadow: 0 0 10px #00ffc8, 0 0 20px #00ffc8;
+  color: #fff;
+}
+
+/* Mobile Responsive adjustment */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .nav-links {
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+}
+  
+  
+  
+  /* logo left, links right */
   /*align-items: center;
   position: fixed;
   top: 0;
