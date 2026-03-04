@@ -370,4 +370,15 @@ p.neon-text {
     padding: 10px 20px;
     text-align: center;
   }
+
+  .timer-warning {
+    color: #ff0055 !important; /* Changes neon to red-pink */
+    text-shadow: 0 0 10px #ff0055, 0 0 30px #ff0055 !important;
+    animation: warning-pulse 0.5s infinite alternate;
+}
+
+@keyframes warning-pulse {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(1.05); opacity: 0.8; }
+}
 }
