@@ -52,6 +52,15 @@
 
   setInterval(updateTimer, 1000);
   updateTimer(); // Initialize immediately
+
+const navToggle = document.querySelector('.navbar-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+}
 </script>
 </body>
 </html>
