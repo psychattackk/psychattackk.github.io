@@ -32,11 +32,20 @@ function startTimer() {
             timerDisplay.classList.remove('timer-warning');
         }
 
-        if (seconds <= 0) {
-            clearInterval(countdown);
-            timerDisplay.classList.remove('timer-warning');
-            alarm.play(); // Play the sound!
-            alert("Time is up! Great job on: " + taskName);
+      if (seconds <= 0) {
+    clearInterval(countdown);
+    timerDisplay.classList.remove('timer-warning');
+    alarm.play();
+    
+    // --- ADD THESE LINES FOR HISTORY ---
+    const li = document.createElement('li');
+    li.innerText = `✔️ ${taskName} (${minutesSelect.value}m)`;
+    li.style.color = "#00ffc8";
+    li.style.textShadow = "0 0 5px #00ffc8";
+    document.getElementById('task-list').appendChild(li);
+    // -----------------------------------
+
+    alert("Time is up! Great job on: " + taskName);
         }
     }, 1000);
 }
