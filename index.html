@@ -38,32 +38,6 @@
     <div id="currentTask">Waiting for task...</div>
     <div id="timer" class="neon-timer">25:00</div>
 
-    <div class="button-group">
-        <button id="start-btn" class="btn">Start Timer</button>
-        <button id="reset-btn" class="btn">Reset</button>
-    </div>
-</main>
-  <script>
-    // Close nav on link click for better mobile UX
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.querySelector('.nav-links').classList.remove('active');
-      });
-    });
-  </script>
-  <script>
-  function updateTimer() {
-    const now = new Date();
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const seconds = String(now.getSeconds()).padStart(2, '0');
-    
-    const timerElement = document.getElementById('timer');
-    if (timerElement) {
-      timerElement.textContent = `${hours}:${minutes}:${seconds}`;
-    }
-  }
-
   setInterval(updateTimer, 1000);
   updateTimer(); // Initialize immediately
 
