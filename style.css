@@ -167,19 +167,28 @@ p.neon-text {
 }
 
 /* -------------------- Navbar Base -------------------- */
-.navbar {
+/* .navbar {
   width: 100%;
   background-color: #1a1a1a;
   padding: 15px 30px;
   box-shadow: 0 0 10px #00ffc8;
   display: flex;
   justify-content: space-between; /* logo left, links right */
-  align-items: center;
+  /*align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
   flex-wrap: wrap; /* allows wrapping on mobile */
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Pushes logo and links to opposite sides */
+  align-items: center;
+  max-width: 1200px; /* Limits the width so it doesn't hit the screen edges */
+  margin: 0 auto;    /* Centers the entire navbar container */
+  padding: 1rem 2rem;
 }
 
 /* Logo */
